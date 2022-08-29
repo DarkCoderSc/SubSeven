@@ -1,0 +1,130 @@
+object FormPassword: TFormPassword
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  BorderWidth = 2
+  Caption = 'log to server'
+  ClientHeight = 107
+  ClientWidth = 249
+  Color = clGray
+  Constraints.MinHeight = 80
+  Constraints.MinWidth = 200
+  DoubleBuffered = True
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyUp = FormKeyUp
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 14
+  object CaptionBar: TS7CaptionBar
+    Left = 0
+    Top = 0
+    Width = 249
+    Height = 19
+    Caption = 'log to server'
+    BorderIcons = [biSystemMenu]
+    Dockable = False
+    Transparent = False
+    Collapsible = True
+    TextCenter = False
+    MainColor = 16744576
+    SecondaryColor = clBlack
+    OnClose = CaptionBarClose
+    Align = alTop
+  end
+  object PanelClient: TS7Panel
+    Left = 0
+    Top = 19
+    Width = 249
+    Height = 88
+    BorderTop = 0
+    BorderLeft = 0
+    BorderRight = 0
+    BorderBottom = 0
+    Color = clBlack
+    BorderColor = clBlack
+    Align = alClient
+    TabOrder = 0
+    object LabelPassword: TLabel
+      AlignWithMargins = True
+      Left = 8
+      Top = 15
+      Width = 53
+      Height = 14
+      Margins.Left = 8
+      Margins.Top = 15
+      Caption = 'password:'
+      Color = clBlack
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentColor = False
+      ParentFont = False
+    end
+    object ButtonConnect: TS7Button
+      Left = 136
+      Top = 45
+      Width = 97
+      Height = 28
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      Enabled = True
+      TextAlign = taCenter
+      Down = False
+      Chevron = False
+      Caption = 'connect'
+      Value = 0
+      OnClick = ButtonConnectClick
+      Busy = False
+    end
+    object EditPassword: TS7Edit
+      AlignWithMargins = True
+      Left = 66
+      Top = 10
+      Width = 167
+      Height = 22
+      Hint = 'server password / passphrase used to secure your connection.'
+      Margins.Left = 0
+      Margins.Top = 10
+      Margins.Right = 0
+      Margins.Bottom = 10
+      AutoSize = False
+      Color = clBlack
+      Enabled = True
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ParentShowHint = False
+      PasswordChar = #8226
+      ShowHint = True
+      TabOrder = 0
+      OnChange = EditPasswordChange
+      AlternativeTheme = False
+      Status = csNormal
+      Validators = []
+    end
+  end
+  object SubSevenForms: TS7Form
+    Resizable = False
+    ShowBorder = True
+    Color = clGray
+    Left = 24
+    Top = 56
+  end
+end

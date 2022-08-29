@@ -1,0 +1,33 @@
+inherited S7FrameDock: TS7FrameDock
+  Width = 461
+  Height = 387
+  Align = alClient
+  ExplicitWidth = 461
+  ExplicitHeight = 387
+  object DockCaption: TS7DockCaption
+    AlignWithMargins = True
+    Left = 2
+    Top = 2
+    Width = 457
+    Height = 22
+    Margins.Left = 2
+    Margins.Top = 2
+    Margins.Right = 2
+    Margins.Bottom = 2
+    ImageList = FormMain.ImageSubSeven
+    Caption = 'subseven'
+    Docked = True
+    OnDockStatusChange = DockCaptionDockStatusChange
+    DockImageIndex = 32
+    UndockImageIndex = 31
+    Align = alTop
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = []
+    ExplicitLeft = 80
+    ExplicitTop = 32
+    ExplicitWidth = 0
+  end
+end

@@ -1,0 +1,260 @@
+object FrameRunAsGroup: TFrameRunAsGroup
+  Left = 0
+  Top = 0
+  Width = 383
+  Height = 323
+  Color = clBlack
+  ParentBackground = False
+  ParentColor = False
+  TabOrder = 0
+  object GroupRunAs: TS7GroupBox
+    AlignWithMargins = True
+    Left = 0
+    Top = 4
+    Width = 383
+    Height = 245
+    Margins.Left = 0
+    Margins.Top = 4
+    Margins.Right = 0
+    Margins.Bottom = 4
+    Align = alTop
+    Caption = 'run as'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = 16744576
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    Color = clBlack
+    ParentColor = False
+    TabOrder = 0
+    ColorBorder = clGray
+    ExplicitWidth = 306
+    object RadioSession: TS7CheckBox
+      AlignWithMargins = True
+      Left = 6
+      Top = 40
+      Width = 371
+      Height = 20
+      Margins.Left = 6
+      Margins.Top = 0
+      Margins.Right = 6
+      Margins.Bottom = 0
+      Caption = 'active session'
+      Mode = cbmRadioBox
+      Checked = False
+      OnStateChanged = RadioSessionStateChanged
+      Color = clBlack
+      HoverColor = 8404992
+      ActiveColor = 8404992
+      Align = alTop
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ExplicitWidth = 294
+    end
+    object RadioWinUser: TS7CheckBox
+      AlignWithMargins = True
+      Left = 6
+      Top = 87
+      Width = 371
+      Height = 20
+      Margins.Left = 6
+      Margins.Top = 0
+      Margins.Right = 6
+      Margins.Bottom = 0
+      Caption = 'custom user'
+      Mode = cbmRadioBox
+      Checked = False
+      OnStateChanged = RadioWinUserStateChanged
+      Color = clBlack
+      HoverColor = 8404992
+      ActiveColor = 8404992
+      Align = alTop
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ExplicitWidth = 294
+    end
+    object GroupCredential: TS7GroupBox
+      AlignWithMargins = True
+      Left = 8
+      Top = 107
+      Width = 367
+      Height = 130
+      Margins.Left = 8
+      Margins.Top = 0
+      Margins.Right = 8
+      Margins.Bottom = 8
+      Align = alClient
+      Caption = 'user credential'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 16744576
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      Color = clBlack
+      ParentColor = False
+      TabOrder = 2
+      ColorBorder = clGray
+      ExplicitWidth = 290
+      object Label3: TLabel
+        AlignWithMargins = True
+        Left = 8
+        Top = 20
+        Width = 351
+        Height = 14
+        Margins.Left = 8
+        Margins.Top = 20
+        Margins.Right = 8
+        Margins.Bottom = 4
+        Align = alTop
+        Caption = 'username'
+        Color = clBlack
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        ExplicitWidth = 48
+      end
+      object Label4: TLabel
+        AlignWithMargins = True
+        Left = 8
+        Top = 64
+        Width = 351
+        Height = 14
+        Margins.Left = 8
+        Margins.Top = 0
+        Margins.Right = 8
+        Margins.Bottom = 4
+        Align = alTop
+        Caption = 'password'
+        Color = clBlack
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        ExplicitWidth = 50
+      end
+      object EditPassword: TS7Edit
+        AlignWithMargins = True
+        Left = 8
+        Top = 82
+        Width = 351
+        Height = 22
+        Hint = 'full path of the program to run'
+        Margins.Left = 8
+        Margins.Top = 0
+        Margins.Right = 8
+        Margins.Bottom = 5
+        Align = alTop
+        AutoSize = False
+        Color = clBlack
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ParentShowHint = False
+        PasswordChar = #8226
+        ShowHint = True
+        TabOrder = 0
+        AlternativeTheme = False
+        Status = csNormal
+        Validators = []
+        ExplicitWidth = 274
+      end
+      inline FrameComboUser1: TFrameComboUser
+        AlignWithMargins = True
+        Left = 8
+        Top = 38
+        Width = 351
+        Height = 23
+        Margins.Left = 8
+        Margins.Top = 0
+        Margins.Right = 8
+        Align = alTop
+        DoubleBuffered = True
+        Color = clBlack
+        ParentBackground = False
+        ParentColor = False
+        ParentDoubleBuffered = False
+        TabOrder = 1
+        ExplicitLeft = 8
+        ExplicitTop = 38
+        ExplicitWidth = 351
+        ExplicitHeight = 23
+        inherited ComboUser: TS7ComboBox
+          Width = 351
+          ExplicitWidth = 351
+        end
+      end
+    end
+    object RadioNTSYS: TS7CheckBox
+      AlignWithMargins = True
+      Left = 6
+      Top = 20
+      Width = 371
+      Height = 20
+      Margins.Left = 6
+      Margins.Top = 20
+      Margins.Right = 6
+      Margins.Bottom = 0
+      Caption = 'NT AUTHORITY\SYSTEM'
+      Mode = cbmRadioBox
+      Checked = True
+      Color = clBlack
+      HoverColor = 8404992
+      ActiveColor = 8404992
+      Align = alTop
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ExplicitWidth = 294
+    end
+    inline FrameComboSessions1: TFrameComboSessions
+      AlignWithMargins = True
+      Left = 3
+      Top = 63
+      Width = 377
+      Height = 21
+      Align = alTop
+      AutoSize = True
+      DoubleBuffered = True
+      Color = clBlack
+      Padding.Left = 4
+      Padding.Right = 4
+      ParentBackground = False
+      ParentColor = False
+      ParentDoubleBuffered = False
+      TabOrder = 4
+      ExplicitLeft = 3
+      ExplicitTop = 63
+      ExplicitWidth = 377
+      ExplicitHeight = 21
+      inherited ComboSessions: TS7ComboBox
+        Left = 4
+        Width = 369
+        Enabled = False
+        Font.Color = clGray
+        ExplicitLeft = 4
+        ExplicitWidth = 369
+      end
+    end
+  end
+end

@@ -1,0 +1,46 @@
+{
+	"version_patch": {
+		"template": "Resources\\version.template.rc",
+		"common_version": "0.1.0",
+		"list": [
+			{
+				"config": "Resources\\viewer.ini",
+				"dest": "Viewer"
+			},
+			{
+				"config": "Resources\\service.ini",
+				"dest": "Service"
+			},
+			{
+				"config": "Resources\\tray.ini",
+				"dest": "Tray"
+			},
+			{
+				"config": "Resources\\helper.ini",
+				"dest": "Helper"
+			},
+			{
+				"config": "Resources\\cert_generator.ini",
+				"dest": "CertGen"
+			},
+			{
+				"config": "Resources\\securedesktop.ini",
+				"dest": "SecureDesktop"
+			}
+		]
+	},
+
+	"src_projects": [
+		"Viewer\\Sub7Viewer.dproj",
+		"Helper\\Sub7Helper.dproj",
+		"Service\\Sub7Service.dproj",
+		"Tray\\Sub7ServerTray.dproj",
+		"CertGen\\CertGenerator.dproj",
+		"SecureDesktop\\SecureDesktop.dproj",
+	],
+	
+	"setup" : [
+		"Setup\\setup_server.iss",
+		"Setup\\setup_viewer.iss"
+	]
+}

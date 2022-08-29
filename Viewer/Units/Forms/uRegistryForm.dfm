@@ -1,0 +1,169 @@
+object FormRegistry: TFormRegistry
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  BorderWidth = 2
+  Caption = 'registry editor'
+  ClientHeight = 349
+  ClientWidth = 566
+  Color = clGray
+  Constraints.MinHeight = 240
+  Constraints.MinWidth = 320
+  DoubleBuffered = True
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 14
+  object CaptionBar: TS7CaptionBar
+    Left = 0
+    Top = 0
+    Width = 566
+    Height = 19
+    Caption = 'registry editor'
+    BorderIcons = [biSystemMenu, biMinimize, biMaximize]
+    S7Form = SubSevenForms
+    Dockable = False
+    Transparent = False
+    Collapsible = True
+    TextCenter = False
+    MainColor = 16744576
+    SecondaryColor = clBlack
+    Align = alTop
+  end
+  object PanelHeader: TS7Panel
+    Left = 0
+    Top = 19
+    Width = 566
+    Height = 28
+    BorderTop = 1
+    BorderLeft = 2
+    BorderRight = 2
+    BorderBottom = 2
+    Color = 8404992
+    BorderColor = clBlack
+    Align = alTop
+    TabOrder = 0
+    object ButtonClear: TS7ImageButton
+      AlignWithMargins = True
+      Left = 30
+      Top = 2
+      Width = 24
+      Height = 24
+      Hint = 'clear list'
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
+      Align = alLeft
+      Background = 8404992
+      ImageIndex = 1
+      Value = 0
+      ExplicitLeft = 2
+      ExplicitHeight = 494
+    end
+    object ButtonDeleteException: TS7ImageButton
+      AlignWithMargins = True
+      Left = 2
+      Top = 2
+      Width = 24
+      Height = 24
+      Hint = 'delete selected row'
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
+      Align = alLeft
+      Enabled = False
+      Background = 8404992
+      ImageIndex = 6
+      Value = 0
+      ExplicitLeft = -10
+      ExplicitTop = 5
+      ExplicitHeight = 28
+    end
+    object ButtonOptions: TS7ImageButton
+      AlignWithMargins = True
+      Left = 58
+      Top = 2
+      Width = 24
+      Height = 24
+      Hint = 'show options'
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
+      Align = alLeft
+      Background = 8404992
+      ImageIndex = 30
+      Value = 0
+      ExplicitLeft = 190
+    end
+  end
+  object PanelClient: TS7Panel
+    Left = 0
+    Top = 47
+    Width = 566
+    Height = 283
+    BorderTop = 0
+    BorderLeft = 0
+    BorderRight = 0
+    BorderBottom = 0
+    Color = clBlack
+    BorderColor = clBlack
+    Align = alClient
+    TabOrder = 1
+  end
+  object PanelLocation: TS7Panel
+    Left = 0
+    Top = 330
+    Width = 566
+    Height = 19
+    BorderTop = 0
+    BorderLeft = 2
+    BorderRight = 2
+    BorderBottom = 2
+    Color = 8404992
+    BorderColor = clBlack
+    Align = alBottom
+    TabOrder = 2
+    object EditPath: TS7Edit
+      AlignWithMargins = True
+      Left = 2
+      Top = 0
+      Width = 562
+      Height = 17
+      Margins.Left = 2
+      Margins.Top = 0
+      Margins.Right = 2
+      Margins.Bottom = 2
+      Align = alClient
+      AutoSize = False
+      Color = 8404992
+      Enabled = True
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      ParentShowHint = False
+      ReadOnly = True
+      ShowHint = True
+      TabOrder = 0
+      AlternativeTheme = True
+      Status = csNormal
+      Validators = []
+    end
+  end
+  object SubSevenForms: TS7Form
+    Resizable = True
+    ShowBorder = True
+    Color = clGray
+    Left = 432
+    Top = 192
+  end
+end

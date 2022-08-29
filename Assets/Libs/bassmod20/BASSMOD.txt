@@ -1,0 +1,271 @@
+BASSMOD 2.0 - Copyright (c) 1999-2004 Ian Luck. All rights reserved
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Files that you should have found in the BASSMOD "package"
+=========================================================
+
+Win32 version
+-------------
+BASSMOD.TXT   This file
+BASSMOD.DLL   The BASSMOD module
+BASSMOD.CHM   BASSMOD documentation
+C\            C/C++ API and samples...
+  BASSMOD.H     BASSMOD C/C++ header file
+  BASSMOD.LIB   BASSMOD import library
+  MODTEST.EXE   BASSMOD example player
+  MODTEST.C     Example player source-code
+  MODTEST.RC    Example player resource file
+  CONTEST.EXE   BASSMOD console example program
+  CONTEST.C     Console example program source-code
+  MAKEFILE      Makefile for examples
+DELPHI\       Delphi API and samples...
+  BASSMOD.PAS   BASSMOD Delphi unit
+  BMDEMO.DPR    Demo project file
+  DEMO.DFM      Form for the BASSMOD demo
+  DEMO.PAS      Unit for the BASSMOD demo
+VB\           Visual Basic API and samples...
+  BASSMOD.BAS   BASSMOD VB module file
+  MODTEST\      Example player
+    PRJMODTEST.VBP
+    FRMMODTEST.FRM
+MASM\         MASM API and samples...
+  BASSMOD.INC   BASSMOD MASM include file
+  PLAYER.EXE    Example player
+  PLAYER.ASM    Example player source-code
+  RSRC.RC       Example player resource file
+  TOOLBAR.BMP   Example player toolbar bitmap
+  COMPILE.BAT   Example player compilation script
+
+Linux version
+-------------
+BASSMOD.TXT   This file
+LIBBASSMOD.SO  The BASSMOD module
+BASSMOD.PDF   BASSMOD documentation
+BASSMOD.H     BASSMOD C/C++ header file
+CONTEST.C     Console example program source-code
+MAKEFILE      Makefile for example
+
+Mac OSX version
+---------------
+BASSMOD.TXT   This file
+LIBBASSMOD.DYLIB  The BASSMOD module
+BASSMOD.PDF   BASSMOD documentation
+BASSMOD.H     BASSMOD C/C++ header file
+MODTEST.C     Example player source-code
+MODTEST.NIB   Example player resources...
+  CLASSES.NIB
+  INFO.NIB
+  OBJECTS.NIB
+CONTEST.C     Console example program source-code
+MAKEFILE      Makefile for examples
+
+PocketPC version
+----------------
+BASSMOD.TXT   This file
+BASSMOD.DLL   The BASSMOD module
+BASSMOD.CHM   BASSMOD documentation
+BASSMOD.H     BASSMOD C/C++ header file
+BASSMOD.LIB   BASSMOD import library
+MODTEST.EXE   BASSMOD example player
+MODTEST.C     Example player source-code
+MODTEST.RC    Example player resource file
+MODTEST.H     Example player resource header file
+
+
+What's the point?
+=================
+BASSMOD is a stripped-down "MOD only" version of the BASS audio system.
+This is useful if you only need to play some MOD music in a demo/etc...
+If you require a more complete audio library, then you should get the
+full BASS library (website URL below).
+
+
+Requirements
+============
+BASSMOD uses the Windows MultiMedia drivers on Win32 & PocketPC platforms,
+the OSS drivers on Linux, and the Core Audio drivers on Mac OS X, so there
+are no special library/driver requirements.
+
+
+Using BASSMOD
+=============
+There is no guarantee that all BASSMOD versions will be compatible with
+all previous versions, so your program should use BASSMOD_GetVersion to
+check the version that is loaded. This also means that you should put
+the BASSMOD module in the same directory as your program, not just
+somewhere in the path, to avoid the possibility of a wrong version being
+loaded.
+
+If you are updating your software from a previous BASSMOD version, then
+you should check the "History" section (below), to see which (if any)
+of the functions that you are using have been affected by a change.
+
+Win32 version
+-------------
+C/C++, Delphi, Visual Basic and MASM APIs are provided, to use BASSMOD
+with another language you'll first have to convert the header file. Or
+you could load it dynamically (eg. use LoadLibrary & GetProcAddress).
+
+To use BASSMOD with Borland C++ Builder, you'll first have to create a
+Borland C++ Builder import library for it. This is done by using the
+IMPLIB tool that comes with Borland C++ Builder. Simply execute this:
+
+	IMPLIB BASSMODB.LIB BASSMOD.DLL
+
+... and then use BASSMODB.LIB in your projects to import BASSMOD.
+
+Linux version
+-------------
+A "LIB" file is not required for Linux, you can build your programs like
+this, for example:
+
+	gcc yoursource ./libbassmod.so -o yourprog
+or
+	gcc yoursource -lbassmod -o yourprog
+
+In the first case, the LIBBASSMOD.SO file will need to be in the same
+directory as the executable (and it can only be run from there). In the
+2nd case, it will have to be somewhere in the path, eg. /usr/lib
+
+Another option is to use the "rpath" linker option to specify exactly
+where it should be loaded from at run-time, for example:
+
+	gcc yoursource -lbassmod -Wl,-rpath,/some/path -o yourprog
+
+Mac OSX version
+---------------
+A "LIB" file is also not required for OSX, you can build your programs
+like this, for example:
+
+	gcc yoursource ./libbassmod.dylib -o yourprog
+or
+	gcc yoursource -L. -lbassmod -o yourprog
+
+The LIBBASSMOD.DYLIB file must be put in the same directory as the
+executable (it can't just be somewhere in the path). See the example
+makefile.
+
+
+Latest Version
+==============
+The latest version of BASSMOD can always be found at the BASS website:
+
+        http://www.un4seen.com/
+
+
+Copyright, Disclaimer, and all that other jazz
+==============================================
+The BASSMOD library is free for non-money making use... if you are
+not charging for the software, then you can use BASS in it for free.
+A mention in the credits would be nice though!
+
+This software is provided "as is", without warranty of ANY KIND,
+either expressed or implied, including but not limited to the implied
+warranties of merchantability and/or fitness for a particular purpose.
+The author shall NOT be held liable for ANY damage to you, your
+computer, or to anyone or anything else, that may result from its use,
+or misuse. Basically, you use it at YOUR OWN RISK.
+
+Usage of BASSMOD indicates that you agree to the above conditions.
+
+You may freely distribute the BASSMOD package as long as NO FEE is
+charged and all the files remain INTACT AND UNMODIFIED.
+
+All trademarks and other registered names contained in the BASSMOD
+package are the property of their respective owners.
+
+
+History
+=======
+These are the major (and not so major) changes at each version stage.
+There are of course bug fixes and other little improvements made along
+the way too. To make upgrading simpler, all functions affected by a
+change to the BASSMOD interface are listed.
+
+2.0 - 21/6/2004
+---------------
+* Decoding without output
+	"decode only" device (BASSMOD_Init)
+	BASSMOD_MusicDecode
+* Non-interpolated mixing
+	BASS_MUSIC_NONINTER (BASSMOD_MusicLoad/PlayEx flag)
+* Flags adjustment without changing playback position
+	BASSMOD_MusicPlayEx
+* Adjustable channel and instrument volumes
+	BASSMOD_MusicSetVolume
+	BASSMOD_MusicGetVolume
+* Support for UNICODE filenames
+	BASS_UNICODE (BASSMOD_MusicLoad flag)
+* Speedier file verification
+	BASSMOD_MusicLoad
+* Device volume is now always left as it is during init/freeing
+	BASS_DEVICE_LEAVEVOL flag *removed*
+* Improved documentation - search option added
+* Further reduced size
+* MacOSX & PocketPC ports introduced
+
+1.6 - 15/8/2002
+---------------
+* Improved performance
+	faster MMX mixers (over 50% faster in some cases!)
+* Seeking in seconds
+	BASSMOD_MusicPlayEx
+	BASSMOD_MusicSetPosition
+* Support for Modplug/ADPCM compressed files
+	BASSMOD_MusicLoad
+* Support for "Invert Loop" (EFx) MOD effect
+* Loading without the samples
+	BASS_MUSIC_NOSAMPLE (BASSMOD_MusicLoad flag)
+* Paused status
+	BASS_ACTIVE_PAUSED (BASSMOD_MusicIsActive)
+* Device description function parameter change
+	BASSMOD_GetDeviceDescription
+
+1.3a - 9/12/2001
+----------------
+* FX sync actually included this time :)
+	BASS_SYNC_MUSICFX
+* Fix for dodgy Windows drivers
+* Reduced DLL/SO size
+
+1.3 - 26/11/2001
+----------------
+* XMPlay surround sound
+	BASS_MUSIC_SURROUND (BASSMOD_MusicLoad/PlayEx flag)
+	BASS_MUSIC_SURROUND2 (BASSMOD_MusicLoad/PlayEx flag)
+* Playback length calculation
+	BASS_MUSIC_CALCLEN (BASSMOD_MusicLoad flag)
+	BASS_MusicGetLength
+* Stereo sample suport in IT/XM/S3M formats
+* UMX (Unreal/Tournament music package) format support
+* User data passed to callback functions
+	SYNCPROC - BASSMOD_MusicSetSync
+* New synchronizer
+	BASS_SYNC_MUSICFX
+* Hi-res floating-point CPU usage monitoring
+	BASSMOD_GetCPU
+* Stop music on a backwards jump effect
+	BASS_MUSIC_STOPBACK (BASSMOD_MusicLoad/PlayEx flag)
+* Disable synchronizers option - saves a little CPU time
+	BASS_DEVICE_NOSYNC (BASSMOD_Init flag)
+* Leave the volume as it is during initialization/closing
+	BASS_DEVICE_LEAVEVOL (BASSMOD_Init flag)
+
+0.7 - 1/12/1999
+---------------
+* First release
+
+
+Credits - API/Sample Contributors
+=================================
+Delphi - Titus Miloi, Rogier Timmermans
+Visual Basic - Adam Hoult
+
+
+Bug reports, Suggestions, Comments, Enquiries, etc...
+=====================================================
+If you have any of the aforementioned please see the BASS forum (at
+the website). If you can't find an answer there, you can email:
+
+        bassmod@un4seen.com
+

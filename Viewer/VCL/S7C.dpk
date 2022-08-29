@@ -1,0 +1,70 @@
+package S7C;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  VirtualTreesR,
+  vclimg,
+  dbrtl;
+
+contains
+  XSuperObject in '..\..\Shared\XSuperObject.pas',
+  XSuperJson in '..\..\Shared\XSuperJson.pas',
+  Sub7.Viewer.VCL.Button in 'Sub7.Viewer.VCL.Button.pas',
+  S7Theme in 'S7Theme.pas',
+  S7Reg in 'S7Reg.pas',
+  Sub7.Viewer.VCL.CaptionBar in 'Sub7.Viewer.VCL.CaptionBar.pas',
+  S7Edit in 'S7Edit.pas',
+  Sub7.Viewer.VCL.SubSevenForm in 'Sub7.Viewer.VCL.SubSevenForm.pas',
+  S7PopupMenu in 'S7PopupMenu.pas',
+  Sub7.Viewer.VCL.CheckBox in 'Sub7.Viewer.VCL.CheckBox.pas',
+  S7Panel in 'S7Panel.pas',
+  S7StatusBar in 'S7StatusBar.pas',
+  S7ImageButton in 'S7ImageButton.pas',
+  S7ComboBox in 'S7ComboBox.pas',
+  S7Classes in 'S7Classes.pas',
+  S7Common in 'S7Common.pas',
+  S7MessageBox in 'S7MessageBox.pas',
+  S7MessageBoxForm in 'S7MessageBoxForm.pas' {Sub7FormMessageBox},
+  S7Hint in 'S7Hint.pas',
+  S7InputQueryForm in 'S7InputQueryForm.pas' {Sub7FormInputQuery},
+  S7OptionDialog in 'S7OptionDialog.pas',
+  S7OptionDialogForm in 'S7OptionDialogForm.pas' {Sub7FormOptionDialog},
+  S7Gauge in 'S7Gauge.pas',
+  S7DockCaption in 'S7DockCaption.pas',
+  S7GroupBox in 'S7GroupBox.pas',
+  S7Types in 'S7Types.pas',
+  S7Validators in 'S7Validators.pas',
+  S7SettingHandler in 'S7SettingHandler.pas',
+  S7ScrollingCredit in 'S7ScrollingCredit.pas',
+  S7Timer in 'S7Timer.pas',
+  S7PaintScene in 'S7PaintScene.pas';
+
+end.

@@ -1,0 +1,24 @@
+#include "windows.h"
+
+1000 DIALOG DISCARDABLE  100, 100, 200, 86
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "BASSMOD - simple test"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "click here to open a file...",10,5,5,190,14
+    CTEXT           "",11,5,21,190,8
+    CTEXT           "",15,20,34,45,10,SS_SUNKEN
+    CTEXT           "",16,80,34,25,10,SS_SUNKEN
+    PUSHBUTTON      "PLAY",12,120,34,30,10
+    PUSHBUTTON      "PAUSE",13,155,34,30,10
+    SCROLLBAR       20,5,47,190,9,WS_TABSTOP
+    CTEXT           "Interpolation",-1,22,59,45,8
+    COMBOBOX        21,22,68,45,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CTEXT           "Ramping",-1,77,59,45,8
+    COMBOBOX        22,77,68,45,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CTEXT           "Surround",-1,132,59,45,8
+    COMBOBOX        23,132,68,45,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+END
