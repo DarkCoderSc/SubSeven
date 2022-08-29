@@ -32,9 +32,9 @@ Open each `*.dpk` project file on your IDE for installation. Don't forget to reg
 
 ## Important Notices
 
-⚠️ Unlike the original SubSeven program, SubSeven Legacy does not contain any malicious code / features.
-⚠️ The whole project is now open source, except for the server (service) at this moment. I'm waiting for some more feedback before releasing the last part of the project.
-⚠️ If you are not familiar with Delphi environment, it might be quite difficult / confusing to compile yourself this project. I won't go too much in the detail of how to install third-parts components. I hope that the code will still teach you some cool things / tricks.
+* ⚠️ Unlike the original SubSeven program, SubSeven Legacy does not contain any malicious code / features.
+* ⚠️ The whole project is now open source, except for the server (service) at this moment. I'm waiting for some more feedback before releasing the last part of the project.
+* ⚠️ If you are not familiar with Delphi environment, it might be quite difficult / confusing to compile yourself this project. I won't go too much in the detail of how to install third-parts components. I hope that the code will still teach you some cool things / tricks.
 
 ## Some notable feature
 
