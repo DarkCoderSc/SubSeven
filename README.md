@@ -1,5 +1,5 @@
 <p align="center">
-![SubSeven](Assets\gfx\logo.png)
+<img src="Assets\gfx\logo.png"/>
 </p>
 
 # SubSeven Legacy
@@ -67,30 +67,30 @@ The retro UI design takes users back to late 90’s/early 2000s—a fitting nost
 ### Main Window (Viewer)
 
 <p align="center">
-![Main](Assets\screenshots\main.png)
+<img src="Assets\screenshots\main.png"/>
 </p>
 
 ### Main Window (Certificate Information)
 
 <p align="center">
-![Main Key](Assets\screenshots\main-key.png)
+<img src="Assets\screenshots\main-key.png"/>
 </p>
 
 ### Remote Terminal Concurrency
 
 <p align="center">
-![Terminal](Assets\screenshots\terminal.png)
+<img src="Assets\screenshots\terminal.png"/>
 </p>
 
 ### Remote File Browser Concurrency + Reactive
 
 <p align="center">
-![File](Assets\screenshots\files.png)
+<img src="Assets\screenshots\files.png"/>
 </p>
 
 ### Remote Process List
 
 <p align="center">
-![Process](Assets\screenshots\process.png)
+<img src="Assets\screenshots\process.png"/>
 </p>
 
