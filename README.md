@@ -34,7 +34,7 @@ This project was made possible because of my long and boring nights between each
 
 
 
-https://user-images.githubusercontent.com/2520298/187400911-6d8713a6-7acb-472a-b807-ba24c885cf3a.mp4
+https://user-images.githubusercontent.com/2520298/187401573-f5b3702b-15ea-4771-93eb-8b0cc20de01d.mp4
 
 
 
