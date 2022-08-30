@@ -1,66 +1,54 @@
 <p align="center">
-<img src="Assets\gfx\logo.png"/>
+<img src="Assets\screenshots\banner.png"/>
 </p>
 
 # SubSeven Legacy
 
-SubSeven Legacy is a complete remake and improvement of the infamous SubSeven (a.k.a Sub7) program from late 90s.
+SubSeven Legacy is a complete remake of the infamous SubSeven Backdoor (a.k.a Sub7) remote access trojan very popular during late 90s.
 
-This project was created during the first six months of my daughter (during the long nights between each 🍼; other fathers will understand). 
-Today I'm very busy with more important projects and I don't feel the need and the motivation to continue this project. The project at this version contains already tons of cool stuff you might learn from.
+You will find more information about former Sub7 Backdoor on the official [Wikipedia Page](https://en.wikipedia.org/wiki/Sub7). 
 
-The code is far from being perfect and tagged for production; the latest version of this project was 0.1 alpha 2 which is still a very experimental release and code. The project is very stable but the code and project environment still requires tons of optimizations / refactoring. 
+As for the former and original Sub7 program, Sub7 Legacy is entirely coded in Delphi and support the latest version of the Delphi IDE/Compiler.
 
-Again, this project was created in only six months which a high level of tiredness. So please don't blame myself for some funny things you might see 😛
+However, in contrary of the original Sub7, Sub7 Legacy does not come with malicious features. 
 
-If you feel grateful, please consider to drop a ⭐ on this repository. This would be the best gift!
+To avoid possible misuse and respect the old look and feel, Sub7 Legacy still work as a direct connection remote access tool and is implanted as a Microsoft Windows Service (requires administrative privilege) to offer more control over the remote system.
 
-## Components
+The main goal of the project was to bring some good memories for those like me who grows with such awesome projects.  
 
-I minized the need for external components for this project. However two external components are required to compiled the whole project and dependencies:
+Included Features:
 
-- Virtual TreeView (https://www.jam-software.com/virtual-treeview)
-- SynEdit (https://github.com/SynEdit/SynEdit)
+-	SubSeven 2.2.X branch UX theme in pure VCL/WinAPI.
+-	Pure Socket API with support of latest OpenSSL version. No extra libraries / components.
+-	Multi-Threaded / Concurrency.
+-	File Manager (Reactive). 
+-	Process Manager.
+-	Remote Terminal.
+-	Windows Session Manager.
+-	Run As / Create Process As (Windows Session Supported)
 
-Internal components can be found inside this repository:
 
-- SubSeven Viewer (`Viewer\VCL\*`)
-- SubSeven Tray (`Tray\VCL\*`)
-- Common (`Shared\VCL\*`)
+Finally, the project is now already considered as paused/dead since I can’t find the time to update it. I’m today very busy on other projects.
 
-Open each `*.dpk` project file on your IDE for installation. Don't forget to register source path on your IDE settings otherwise, during compile time, compiler won't be able to find corresponding component source files.
+This project was made possible because of my long and boring nights between each 🍼during the first six months of my daughter so don’t be rude with me for some funny things you might find in the code (including very experimental stuff)
 
-## Important Notices
+## VCL Packages / Components
 
-* ⚠️ Unlike the original SubSeven program, SubSeven Legacy does not contain any malicious code / features.
-* ⚠️ The whole project is now open source, except for the server (service) at this moment. I'm waiting for some more feedback before releasing the last part of the project.
-* ⚠️ If you are not familiar with Delphi environment, it might be quite difficult / confusing to compile yourself this project. I won't go too much in the detail of how to install third-parts components. I hope that the code will still teach you some cool things / tricks.
+I minimized the need of external components while making this project. Only two external components are required:
 
-## Some notable feature
+-	Virtual TreeView (Free and open source: https://www.jam-software.com/virtual-treeview)
+-	SynEdit (Free and open source: https://github.com/SynEdit/SynEdit )
 
-### Feature Rich
 
-SubSeven Legacy is no basic remote-control app. This version is a full-fledged remote control software with extensive capability.
+Other required components (custom components) mostly for the SubSeven UX can be found in the project:
 
-### Multi-thread
+-	SubSeven Viewer UX Components (`Viewer\VCL\*`)
+-	SubSeven Tray Components (`Tray\VCL\*`)
+-	Common / Shared Components (`Shared\VCL\*`)
 
-Users can perform multiple tasks at the same time without blocking other actions, with support for multiple, simultaneous connections to a single server.
+If you are not familiar with Delphi, installing components could be quite confusing. Basically, open each components corresponding `.dpk` files then right click on solution explorer and click install. 
 
-### Secure
-
-Security is part of the design, with network traffic encrypted by the latest version of OpenSSL (with TLS 1.3 AES 256 GCM SHA384) and password or pub key authentication (or both).
-
-### Fast & Reliable
-
-Lightweight native code for everything from the UI to networking and its own OpenSSL socket implementation bound with the API provides 100% control of client-server communication.
-
-### Session Friendly
-
-Unlike other remote-control software, SubSeven Legacy is session friendly, which means you can interact with distinct active Microsoft Windows Sessions.
-
-### Swag
-
-The retro UI design takes users back to late 90’s/early 2000s—a fitting nostalgia for a reboot of one of the most renowned remote access tools ever made.
+You must then tell Delphi Compiler where to find the source code of each components (see: https://docwiki.embarcadero.com/RADStudio/Sydney/en/Installing_Component_Packages). 
 
 ## Screen Shots of the Viewer
 
