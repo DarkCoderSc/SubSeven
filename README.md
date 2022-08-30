@@ -16,7 +16,11 @@ To avoid possible misuse and respect the old look and feel, Sub7 Legacy still wo
 
 The main goal of the project was to bring some good memories for those like me who grows with such awesome projects.  
 
-Included Features:
+## Included Features:
+
+<p align="center">
+<img src="Assets\screenshots\features.png"/>
+</p>
 
 -	SubSeven 2.2.X branch UX theme in pure VCL/WinAPI.
 -	Pure Socket API with support of latest OpenSSL version. No extra libraries / components.
@@ -88,3 +92,8 @@ You must then tell Delphi Compiler where to find the source code of each compone
 <img src="Assets\screenshots\process.png"/>
 </p>
 
+## SubSeven Art Gallery
+
+<p align="center">
+<img src="Assets\gfx\art.png"/>
+</p>
