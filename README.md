@@ -60,6 +60,8 @@ If you are not familiar with Delphi, installing components could be quite confus
 
 You must then tell Delphi Compiler where to find the source code of each components (see: https://docwiki.embarcadero.com/RADStudio/Sydney/en/Installing_Component_Packages). 
 
+⚠️ **Import Notice**: Latest version of Delphi now supports HDPI for their IDE. Use Delphi IDE non-HDPI mode to open and compile the project. The HDPI IDE is completely bugged and will destroy the UX of the SubSeven Project. 
+
 ## Screen Shots of the Viewer
 
 ### Main Window (Viewer)
